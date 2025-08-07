@@ -1,0 +1,9 @@
+spring:
+  r2dbc:
+    url: r2dbc:pool:mysql://localhost:3306/inventory
+    username: root
+    password: elieta103
+
+logging:
+  pattern:
+    console: ${LOGPATTERN_CONSOLE:%yellow(%d{HH:mm:ss.SSS}) %blue(%-5level) %red([%thread]) %green(%logger{15}) - %msg%n}

@@ -1,0 +1,11 @@
+services:
+  mysql:
+    image: 'mysql:latest'
+    container_name: 'my-sql-v1'
+    restart: always
+    volumes:
+      - './db-scripts/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql'
+    environment:
+      - MYSQL_ROOT_PASSWORD=elieta103
+    ports:
+      - '3306:3306'
