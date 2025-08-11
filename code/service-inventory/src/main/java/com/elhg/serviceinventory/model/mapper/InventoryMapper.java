@@ -7,6 +7,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
 
+
 @Mapper(componentModel = "spring")
 public interface InventoryMapper {
     InventoryMapper INSTANCE = Mappers.getMapper(InventoryMapper.class);
@@ -16,4 +17,5 @@ public interface InventoryMapper {
 
     @Mapping(target = "idProduct", source = "code")
     InventoryResponse modelToResponse(ProductModel productModel);
+
 }
