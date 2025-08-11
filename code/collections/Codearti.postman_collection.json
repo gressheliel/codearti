@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "c2d1afb0-e03a-43ea-bfc2-802f1ff26b2e",
+		"name": "Codearti",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21081336"
+	},
+	"item": [
+		{
+			"name": "Get All Inventories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/services-inventory/inventories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"services-inventory",
+						"inventories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new inventory",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"idProduct\": \"AB-001\",\n    \"nameProduct\": \"Laptop\",\n    \"price\" : 150,\n    \"stock\" : 25\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/services-inventory/inventories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"services-inventory",
+						"inventories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Inventory By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/services-inventory/inventories/AB-001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"services-inventory",
+						"inventories",
+						"AB-001"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
